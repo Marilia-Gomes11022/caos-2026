@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/caos.css')}}">
+{% endblock %}
+
+{% block conteudo %}
+  <div class="acesso">
+    <div class="container-acesso">
+      <div>
+        <h1>
+          <span>Veja o</span>
+          <span>novo</span>
+          <span>mundo</span>
+          <span>da leitura!</span>
+        </h1>
+        <p>Descubra todos os livros à espera de um novo leitor como você.</p>
+        <a href="{{url_for('login')}}">Acessar</a>
+      </div>
+      <img src="{{url_for('static', filename='imgs/gato_em_cima_livros.svg')}}" alt="catbook">
+    </div>
+  </div>
+  <div class="separar">
+    <img src="{{url_for('static', filename='imgs/livros_espacados.svg')}}" alt="book">
+  </div>
+  <section class="genero-alta">
+    <div class="genero-alta-container">
+      <div class="titulo">
+        <h3>Gêneros em alta</h3>
+      </div>
+
+      <div class="generos">
+        <div class="genero-container">
+          <img src="{{url_for('static', filename='imgs/genero_romance.svg')}}" alt="capa genero">
+          <div class="info">
+            <div class="texto">
+              <h3>Romance</h3>
+              <p>Explore agora!</p>
+            </div>
+            <a href="#"><img src="{{url_for('static', filename='imgs/seta.svg')}}" alt="seta"></a>
+          </div>
+        </div>
+
+        <div class="genero-container">
+          <img src="{{url_for('static', filename='imgs/genero_terror.svg')}}" alt="capa genero">
+          <div class="info">
+            <div class="texto">
+              <h3>Terror</h3>
+              <p>Explore agora!</p>
+            </div>
+            <a href="#"><img src="{{url_for('static', filename='imgs/seta.svg')}}" alt="seta"></a>
+          </div>
+        </div>
+
+        <div class="genero-container">
+          <img src="{{url_for('static', filename='imgs/genero_fic_cient.svg')}}" alt="capa genero">
+          <div class="info">
+            <div class="texto">
+              <h3>Ficção Científica</h3>
+              <p>Explore agora!</p>
+            </div>
+            <a href="#"><img src="{{url_for('static', filename='imgs/seta.svg')}}" alt="seta"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sobre-caos">
+    <div class="container">
+      <div class="imagem">
+        <img src="{{url_for('static', filename='imgs/sobre_pag_inicial.svg')}}" alt="Mulher lendo um livro">
+      </div>
+
+      <div class="texto">
+        <h2>Sobre o </h2>
+        <h2><span>CAOS</span></h2>
+        <p class="descricao">
+          Conheça mais sobre a Comunidade de Acesso, Obras e Saberes!
+        </p>
+
+        <p class="chamada">
+          <strong>Clique em saiba mais</strong><br>
+          e veja nossa história
+        </p>
+
+        <a href="{{url_for('sobre')}}" class="botao">Saiba mais</a>
+      </div>
+    </div>
+  </section>
+  <section class="sugestoes">
+    <h2 class="titulo">Sugestões de leitura</h2>
+
+    <div class="grid-livros">
+      <!-- Livro 1 -->
+      <div class="livro">
+        <div class="livro-imagem">
+          <img src="{{url_for('static', filename='imgs/homens_pretos.png')}}" alt="Águas de Homens Pretos">
+        </div>
+        <p class="livro-nome">Águas de Homens Pretos</p>
+        <div class="livro-link">
+          <span>Veja mais</span>
+          <a class="seta" href="#">→</a>
+        </div>
+      </div>
+
+      <!-- Livro 2 -->
+      <div class="livro">
+        <div class="livro-imagem">
+          <img src="{{url_for('static', filename='imgs/heartstopper.png')}}" alt="Heartstopper – Boy meets Boy">
+        </div>
+        <p class="livro-nome">Heartstopper–Boy meets Boy.</p>
+        <div class="livro-link">
+          <span>Veja mais</span>
+          <a class="seta" href="#">→</a>
+        </div>
+      </div>
+
+      <!-- Livro 3 -->
+      <div class="livro">
+        <div class="livro-imagem">
+          <img src="{{url_for('static', filename='imgs/pequeno_principe.png')}}" alt="O Pequeno Príncipe">
+        </div>
+        <p class="livro-nome">O pequeno príncipe</p>
+        <div class="livro-link">
+          <span>Veja mais</span>
+          <a class="seta" href="#">→</a>
+        </div>
+      </div>
+
+      <!-- Livro 4 -->
+      <div class="livro">
+        <div class="livro-imagem">
+          <img src="{{url_for('static', filename='imgs/mordida.png')}}" alt="Mordida">
+        </div>
+        <p class="livro-nome">Mordida</p>
+        <div class="livro-link">
+          <span>Veja mais</span>
+          <a class="seta" href="#">→</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="comunidade">
+    <div class="conteudo">
+      <h2>Conheça a nossa</h2>
+      <div class="titulo-destaque">
+        <span>Comunidade</span>
+      </div>
+
+      <p class="descricao">
+        Ambiente virtual desenvolvido especialmente para nossos leitores poderem expressar, indicar,
+        refletir e discutir ideias sobre seus livros e autores!
+      </p>
+
+      <h3>Junte-se a nós agora!</h3>
+
+      <button class="btn-juntar">Juntar-se</button>
+    </div>
+
+    <div class="imagem-comunidade">
+      <img src="{{url_for('static', filename='imgs/comunidade_pag_inicial.svg')}}" alt="Pessoas lendo livros">
+    </div>
+  </section>
+{% endblock %}
